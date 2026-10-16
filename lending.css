@@ -1,0 +1,140 @@
+* {  /* *-селектор "все элементы". Убирает стандартные отступы в браузере */
+    margin: 0; /*нет внешних отступов*/
+    padding: 0; /*нет внутрених отступов*/
+    box-sizing: border-box; /*ширина элемента включает padding и border*/
+}
+
+body { /*раздел в html*/
+    font-family: Arial, sans-serif; /*настройка шрифта в разделе выше*/
+    line-height: 1.6; /*расстояние между строками*/
+    color: #2c2c2c; /*цвет текста*/
+    background: #f5f0e8; /*цвет фона*/
+}
+
+.container { /*класс в html*/
+    max-width: 1200px; /*не шире 1200 пикселей*/
+    margin: 0 auto; /*отступы слева/справа = центрирование*/
+    padding: 0 20px; /*отступы внутри, чтобы текст на маленьких экранах не прилипал к краям*/
+}
+
+header { /*раздел в html*/
+    background: white; /*цвет фона*/
+    padding: 20px 0; /*внутрение отступы, снизу и вверху на 20, справа и лева нет*/
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*цвет теней*/
+}
+
+header .container { /*класс контейнер в разделе header*/
+    display: flex; /*дочерние в ряд*/
+    justify-content: space-between; /*выравнивание по главной оси, крайние по краям*/
+    align-items: center; /*выравнивание по высоте по центру*/
+}
+
+header h1 { /*раздел в html главный заголовок*/
+    color: #6f4e37; /*цвет шрифта*/
+}
+
+header nav a { /*в разделе header изменения над ссылками*/
+    color: #2c2c2c; /*цвет текста*/
+    text-decoration: none; /*убирает подчёркивание*/
+    margin-left: 20px; /*внешний отступ слева*/
+}
+
+header nav a:hover { /*при наведении мышью на ссылку*/
+    color: #6f4e37; /*цвет текста*/
+}
+
+.hero { /*этот класс в html изменить*/
+    padding: 100px 0; /*внутренние отступпы снизу и свурху на 100 пикселей, справа и слева нет*/
+    text-align: center; /*выравнивание текста по центру*/
+}
+
+.hero h2 { /*в классе херо текст 2 уровня*/
+    font-size: 48px;/*размер шрифта*/
+    color: #6f4e37; /*цвет текста*/
+    margin-bottom:  20px; /*внешний отступ снизу*/
+}
+
+.hero p { /*в классе херо обычный текст*/
+    font-size: 20px; /*размер шрифта*/
+    margin-bottom: 30px; /*отступ внешний снизу*/
+}
+
+.hero button { /*в классе херо книпки меняем*/
+    background: #6f4e37; /*её фон*/
+    color: white; /*цвет текста на ней*/
+    border: none; /*убирает границы элемента*/
+    padding: 15px 40px; /* внутренний отступ сверху и снизу на 15 пикселей, справа и слева на 40*/
+    font-size: 18px; /*размер шрифта*/
+    border-radius: 8px; /*скругление кнопки*/
+    cursor: pointer; /*при наведении на кнопку курсор становиться рукой*/
+}
+
+.hero button:hover { /* в классе херо при наведении на кнопку*/
+    background: #5a3e2b; /*цвет фона*/
+}
+
+.features { /*класс феатурс*/
+    padding: 60px 0; /*внутренний оступ сверхе и низу 60 пикселей, справа и слева их нет*/
+    background: white; /*цвет фона*/
+}
+
+.features .container { /*в классе феатурс класс контейнер*/
+    display: flex; /*дочерние в ряд*/
+    gap: 30px; /*отступ 30 пикселей*/
+    justify-content: center; /*выравнивание по горизонтали(т.к. флекс по умолчанию row) по центру*/
+}
+
+.card { /*класс кард*/
+    flex: 1; /* занять место*/
+    text-align: center; /*выравнивание текста,картинок и кнопок внутри карточек по центру*/
+    padding: 30px; /*внутренние отступы со всех сторон 30 пикселей*/
+    border-radius: 12px; /* скруглить */
+    background: #f5f0e8; /*цвет фона*/
+}
+
+.card img { /*в классе кард изменять картинки*/
+    width: 100%; /*во всю ширину*/
+    height: 200px;/*высота картинки 200 пикселей*/
+    object-fit: cover; /*картинка заполняет контейнер, обрезая лишнее, сохраняя пропорции*/
+    border-radius: 8px; /*скругление*/
+    margin-bottom: 15px; /*внешний отступ снизу*/
+}
+
+.card h3 {
+    color: #6f4e37;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #2c2c2c;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .features .container {
+        flex-direction: column;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
